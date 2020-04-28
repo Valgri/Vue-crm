@@ -2,7 +2,7 @@
     <div class="col s12 m6">
         <div>
             <div class="page-subtitle">
-                <h4>Создать</h4>
+                <h4>{{'Create' | localize}}</h4>
             </div>
 
             <form @submit.prevent="submitHandler">
@@ -31,7 +31,7 @@
                 </div>
 
                 <button class="btn waves-effect waves-light" type="submit">
-                    Создать
+                    {{'Create' | localize}}
                     <i class="material-icons right">send</i>
                 </button>
             </form>

@@ -1,7 +1,7 @@
 <template>
     <form class="card auth-card" @submit.prevent="submitHandler">
         <div class="card-content">
-            <span class="card-title">Домашняя бухгалтерия</span>
+            <span class="card-title" >{{'Buh' | localize}}</span>
             <div class="input-field">
                 <input
                         id="email"
@@ -36,14 +36,14 @@
                         class="btn waves-effect waves-light auth-submit"
                         type="submit"
                 >
-                    Войти
+                    {{'Enter' | localize}}
                     <i class="material-icons right">send</i>
                 </button>
             </div>
 
             <p class="center">
-                Нет аккаунта?
-                <router-link to="/register">Зарегистрироваться</router-link>
+                {{'No_account' | localize}}
+                <router-link to="/register">{{'Register' | localize}}</router-link>
             </p>
         </div>
     </form>
@@ -59,6 +59,11 @@
             email: '',
             password: ''
         }),
+        metaInfo() {
+                return {
+                        title: this.$title('Enter')
+                }
+        },
         validations: {
             email: {email, required},
             password: {required, minLength: minLength(8)}
@@ -66,6 +71,10 @@
         mounted(){
             if(messages[this.$route.query.message]){
                 this.$message(messages[this.$route.query.message])
+            }
+            if (this.$route.query.locale) {
+                    let info = {locale: this.$route.query.locale}
+                    this.$store.commit('setInfo', info)
             }
         },
         methods: {

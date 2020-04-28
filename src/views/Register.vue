@@ -77,6 +77,11 @@
       name: "",
       agree: false
     }),
+    metaInfo() {
+      return {
+        title: this.$title('Register')
+      }
+    },
     validations: {
       email: {email, required},
       password: {required, minLength: minLength(8)},

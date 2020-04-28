@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="page-title">
-      <h3>История записей</h3>
+      <h3>{{'Menu_History' | localize}}</h3>
     </div>
 
     <div class="history-chart">
@@ -41,6 +41,11 @@
         loading: true,
         records: [],
         categories: []
+      }
+    },
+    metaInfo() {
+      return {
+        title: this.$title('Menu_History')
       }
     },
     components: {

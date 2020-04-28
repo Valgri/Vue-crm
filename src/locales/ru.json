@@ -1,0 +1,21 @@
+{
+  "ProfileTitle" : "Профиль",
+  "Message_entername" : "Введите имя",
+  "Update" : "Обновить",
+  "Name" : "Имя",
+  "Menu_Bill": "Cчет",
+  "Menu_Planning": "Планирование",
+  "Menu_History": "История",
+  "Menu_NewRecord": "Новая запись",
+  "Menu_Categories": "Категории",
+  "Add_Categories" : "Добавить новую катеорию",
+  "Create" : "Создать",
+  "Editing" : "Редактировать",
+  "signOut" : "Выйти",
+  "Buh" : "Домашняя бухгалтерия",
+  "Enter" : "Войти",
+  "Register" : "Зарегистрироваться",
+  "No_account" : "Нет аккаунта?",
+  "Detail_title" : "Детали"
+
+}

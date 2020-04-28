@@ -1,0 +1,21 @@
+{
+  "ProfileTitle" : "Profile",
+  "Message_entername" : "Enter name",
+  "Update" : "Update",
+  "Name" : "Name",
+  "Menu_Bill": "Bill",
+  "Menu_Planning": "Planning",
+  "Menu_History": "History",
+  "Menu_NewRecord": "New Record",
+  "Menu_Categories": "Categories",
+  "Add_Categories" : "Add new category",
+  "Create" : "Create",
+  "Editing" : "Editing",
+  "signOut" : "Sign Out",
+  "Buh" : "Home accounting",
+  "Enter" : "Sign In",
+  "Register" : "Register",
+  "No_account" : "No account yet?",
+  "Detail_title" : "Details"
+
+}

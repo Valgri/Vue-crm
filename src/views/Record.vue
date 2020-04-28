@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="page-title">
-            <h3>Новая запись</h3>
+            <h3>{{'Menu_NewRecord' | localize}}</h3>
         </div>
         <Loader v-if="loading"/>
         <p class="center" v-else-if="!categories.length">Категорий пока нет
@@ -95,6 +95,11 @@
                                 type: 'outcome',
                                 amount: 1,
                                 description: ''
+                        }
+                },
+                metaInfo() {
+                        return {
+                                title: this.$title('Menu_NewRecord')
                         }
                 },
                 async mounted() {

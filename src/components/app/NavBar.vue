@@ -29,7 +29,7 @@
                         <li class="divider" tabindex="-1"></li>
                         <li>
                             <a href="#" class="black-text" @click.prevent="logout">
-                                <i class="material-icons">assignment_return</i>Выйти
+                                <i class="material-icons">assignment_return</i>{{'signOut' | localize}}
                             </a>
                         </li>
                     </ul>
@@ -48,8 +48,13 @@
         }),
         methods: {
             async logout(){
+                let locale = this.$store.getters.info.locale
                 await this.$store.dispatch('logout');
-                this.$router.push("/login?message=logout")
+                await this.$router.push({name: 'login?message=logout', query: {
+                        message: 'logout',
+                        locale: locale
+                    }
+                })
             }
         },
         computed: {

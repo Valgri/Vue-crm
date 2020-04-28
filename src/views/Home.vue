@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="page-title">
-            <h3>Счет</h3>
+            <h3>{{'Menu_Bill' | localize}}</h3>
 
             <button class="btn waves-effect waves-light btn-small" @click="refresh">
                 <i class="material-icons">refresh</i>
@@ -23,7 +23,6 @@
 <script>
     // @ is an alias to /src
 
-
     import HomeBill from "../components/HomeBill";
     import HomeCurrency from "../components/HomeCurrency";
 
@@ -34,8 +33,14 @@
             loading: true,
             currency: null
         }),
+        metaInfo() {
+                return {
+                        title: this.$title('Menu_Bill')
+                }
+        },
         async mounted() {
             this.currency = await this.$store.dispatch('fetchCurrency')
+             this.currency.rates['EUR'] = 1
             this.loading = false
         },
         methods: {
